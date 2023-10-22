@@ -21,22 +21,26 @@ h1 {
 
 img {
     width: 70px;
-    margin: 20px auto;
+    margin: auto;
     display: flex;
+}
+
+.image {
+    height: 60px;
 }
 
 p {
     margin: 0 auto;
-    
+    margin-top: 10px;
+    font-size: 13px;
 }
 
 button {
     border: 0;
     border-radius: 5px;
     margin-top: 10px;
-    height: 60px;
-    width: 200px;
-    font-size: 20px;
+    padding: 10px 20px;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     transition: all 500ms ease;
@@ -44,18 +48,82 @@ button {
     background: var(--tg-theme-button-text-color);
 }
 
-button:hover {
+button:active {
     background: var(--tg-theme-secondary-bg-color);
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-
+    grid-template-columns: repeat(3, 1fr); /* Разбиваем на два столбца */
+    gap: 0px; /* Расстояние между элементами */
+    justify-items: center; /* Центрируем элементы в столбцах */
 }
+
 .item {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px; /* Задайте фиксированную высоту, которая подходит для ваших элементов */
+}
 
+.buy-button {
+    margin-top: 10px;
+}
+
+
+
+.quantity {
+    display: none; /* Изначально скрываем кнопки "плюс" и "минус" */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: center; /* Центрируем элементы по вертикали */
+    margin-top: 10px;
+    width: 88px;
+}
+
+
+
+.decrement {
+    border: 0;
+    border-radius: 5px;
+    padding: 4px 15px;
+    font-size: 25px;
+    font-style: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 3px;
+    font-weight: 500;
+    background-color:rgb(240,128,128);
+}
+.increment {
+    border: 0;
+    border-radius: 5px;
+    padding: 4px 12px;
+    font-size: 25px;
+    font-style: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 3px;
+    font-weight: 500;
+}
+
+
+.count {
+    font-size: 15px;
+    display: none;
+}
+
+span.count{
+    color: black;
+    text-align: right;
+    background-color: yellow;
+    border-radius: 30%;
+    padding: 1px 10px;
 }
