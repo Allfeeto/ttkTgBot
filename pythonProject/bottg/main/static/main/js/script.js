@@ -22,6 +22,8 @@ if ("vibrate" in navigator) {
 
 
 
+
+
 buyButtons.forEach((buyButton, index) => {
     buyButton.addEventListener('click', () => {
         buyButton.style.display = 'none'; // Скрываем кнопку "Купить"
